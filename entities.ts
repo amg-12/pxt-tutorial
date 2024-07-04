@@ -90,7 +90,7 @@ namespace entities {
     //% group=Equipment weight=90
     //% target.shadow=minecraftTarget
     export function replaceItem(itemId: number, slot: Slot, target: TargetSelector) {
-        let itemName = blocks.nameOfBlock(itemId).replace(" ", "_")
+        let itemName = blocks.nameOfBlock(itemId).replaceAll(" ", "_")
         player.execute(`replaceitem entity ${target} ${getSlot(slot)} 1 ${itemName}`)
     }
 
